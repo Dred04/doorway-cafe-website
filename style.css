@@ -486,6 +486,69 @@ button {
 }
 
 
+/* ================= VISIT STRIP ================= */
+
+.visit-strip {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.visit-strip-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 28px 28px 26px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.2);
+  display: grid;
+  grid-template-columns: 0.8fr 1.6fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.visit-strip-copy h3,
+.menu-discovery-head h3 {
+  margin: 8px 0 0;
+  font: 500 clamp(30px, 3vw, 48px) / 1 var(--serif);
+  letter-spacing: -.04em;
+}
+
+.visit-strip-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.visit-strip-meta p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.visit-strip-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.visit-strip-links a,
+.menu-discovery-actions a {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visit-strip-links a {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 10px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+}
+
 /* ================= INTRO ================= */
 
 .intro {
@@ -1019,6 +1082,55 @@ button {
 
 }
 
+
+/* ================= MENU DISCOVERY ================= */
+
+.menu-discovery {
+  max-width: none;
+  background: var(--paper);
+  padding-top: 0;
+}
+
+.menu-discovery-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+}
+
+.menu-discovery-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 26px;
+}
+
+.menu-discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.menu-discovery-grid figure {
+  margin: 0;
+}
+
+.menu-discovery-grid img {
+  aspect-ratio: 1 / 1.08;
+  object-fit: cover;
+}
+
+.menu-discovery-grid figcaption {
+  font: 600 18px / 1.2 var(--serif);
+  padding-top: 10px;
+  color: var(--ink);
+}
+
+.menu-discovery-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
 /* ================= MENU ================= */
 
@@ -1679,6 +1791,7 @@ button {
 
   }
 
+  .visit-strip-inner,
   .intro-grid,
   .story-grid,
   .visit-grid,
@@ -1690,6 +1803,10 @@ button {
 
     gap: 40px;
 
+  }
+
+  .visit-strip-meta {
+    justify-content: flex-start;
   }
 
   .section {
@@ -1825,6 +1942,17 @@ button {
 
   }
 
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 52px;
+    padding-inline: 18px;
+  }
+
   .hero-scroll {
 
     display: none;
@@ -1871,10 +1999,23 @@ button {
 
   }
 
+  .menu-discovery-grid,
   .food-grid {
 
     grid-template-columns: 1fr;
 
+  }
+
+  .visit-strip-inner {
+    padding: 20px 18px;
+  }
+
+  .visit-strip-links {
+    gap: 12px;
+  }
+
+  .visit-strip-links a {
+    min-height: 36px;
   }
 
   .food-feature,
@@ -1938,6 +2079,14 @@ button {
 
     flex-wrap: wrap;
 
+  }
+
+  .nav-links a,
+  .nav-cta,
+  .btn,
+  .visit-strip-links a,
+  .action-row a {
+    min-height: 44px;
   }
 
 }
